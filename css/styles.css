@@ -19,6 +19,27 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
 .list {
   list-style: none;
 }
@@ -39,7 +60,14 @@ body {
   overflow: hidden;
 }
 
-.logo-header {
+/* -----------------------Header-------------------- */
+.header {
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 25px;
+  padding-top: 24px;
+}
+.header-logo {
+  margin-right: 93px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -55,8 +83,11 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
-.current:hover,
-.current:focus {
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+.current {
   color: var(--accent-color);
 }
 .contacts-link {
@@ -65,8 +96,15 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
+/* --------------------------------Hero----------------------------- */
 .hero {
-  background: var(--footer-background);
+  background-color: var(--footer-background);
+  padding-bottom: 200px;
+  padding-top: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -76,6 +114,9 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--special-text-color);
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .hero-btn {
   font-family: inherit;
@@ -89,41 +130,50 @@ body {
   cursor: pointer;
   color: var(--special-text-color);
   background: var(--accent-color);
+  padding: 10px 32px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--accent-background);
 }
+/* -----------------------------Peculiarities-------------------------------- */
 .peculiarities-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .peculiarities-text {
+  max-width: 270px;
   line-height: 1.71;
   color: var(--text-color);
+}
+/* --------------------------------Process------------------------------- */
+.process {
+  padding-top: 0;
 }
 .process-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
+/* ---------------------------------Team----------------------------------- */
 .team {
   background: var(--secondary-background);
 }
 .team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.66;
+  line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
-.team-card {
+.team-item {
   width: 270px;
-  height: 368px;
-  left: 215px;
-  top: 1635px;
+  background-color: var(--special-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -133,6 +183,7 @@ body {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 10px;
 }
 .team-post {
   font-size: 16px;
@@ -140,6 +191,8 @@ body {
   text-align: center;
   color: var(--text-color);
 }
+/* -----------------------------------------Portfolio---------------------------------------- */
+
 .portfolio-btn {
   font-family: inherit;
   font-weight: 500;
@@ -149,48 +202,62 @@ body {
   text-align: center;
   cursor: pointer;
   border: none;
+  border-radius: 4px;
   color: var(--title-color);
   background: var(--secondary-background);
+  padding: 6px 22px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background: var(--accent-color);
   color: var(--special-text-color);
 }
-.portfolio-card {
-  width: 370px;
-  height: 404px;
-  left: 215px;
-  top: 262px;
+.portfolio-wrap {
+  padding: 20px 24px;
   border: 1px solid var(--border-color);
+  border-top: none;
+}
+.portfolio-item {
+  width: 370px;
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--title-color);
 }
 .portfolio-text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--text-color);
 }
-.page-footer {
+/* ------------------------------------------Footer-------------------------------------- */
+.footer {
   background: var(--footer-background);
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
-.logo-footer {
+.footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   color: var(--special-text-color);
 }
-.adress ul {
+.footer-adress {
   font-style: normal;
-  line-height: 1.71;
+  margin-top: 20px;
 }
 .footer-map {
   color: var(--special-text-color);
+  line-height: 1.71;
 }
 .footer-map:hover,
 .footer-map:focus {
@@ -198,6 +265,7 @@ body {
 }
 .footer-contacts {
   color: var(--contacts-footer-color);
+  line-height: 1.71;
 }
 .footer-contacts:hover,
 .footer-contacts:focus {
